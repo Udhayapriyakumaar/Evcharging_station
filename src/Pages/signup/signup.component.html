@@ -1,0 +1,39 @@
+
+    <div class="container">
+        <!-- Left Section (Image) -->
+        <div class="image-section">
+            <img src="assets/signup.jpg" alt="Illustration">
+        </div>
+
+        <!-- Right Section (Form) -->
+        <div class="form-section">
+           
+            <div class="form-box">
+                <br>
+                <h1>WELCOME!</h1>
+<br>
+                <!-- Tabs -->
+                <div class="tabs">
+                    <span (click)="this.login()" id="login-tab">Login</span>
+                    <span  id="signup-tab" class="active">Sign Up</span>
+                </div>
+
+                <!-- Sign Up Form -->
+                <form>
+                    <label>Username</label>
+                    <input type="text" required>
+
+                    <label>Mobile No</label>
+                    <input type="text" required>
+
+                    <label>Password</label>
+                    <input type="password" required>
+
+                    <label>Confirm Password</label>
+                    <input type="password" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>

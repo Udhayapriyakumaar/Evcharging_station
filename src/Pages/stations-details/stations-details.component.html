@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="tabs">
+    <button [ngClass]="{ 'active': activeTab === 'location' }" (click)="setActiveTab('location')">
+      Location Details
+    </button>
+    <button [ngClass]="{ 'active': activeTab === 'charger' }" (click)="setActiveTab('charger')">
+      Charger Details
+    </button>
+    <button [ngClass]="{ 'active': activeTab === 'map' }" (click)="setActiveTab('map')">
+      Map View
+    </button>
+  </div>
+
+  <div *ngIf="stationDetails">
+    <div class="content" *ngIf="activeTab === 'location'">
+      <h2>Location Details</h2>
+      <p><strong>Name:</strong> {{ stationDetails.name }}</p>
+      <p><strong>Address:</strong> {{ stationDetails.location }}</p>
+      <p><strong>Available Slots:</strong> {{ stationDetails.availableSlots }}</p>
+      <p><strong>Pricing per KWH:</strong> {{ stationDetails.pricingPerKwh }}</p>
+    </div>
+
+    <div class="content" *ngIf="activeTab === 'charger'">
+      <h2>Charger Details</h2>
+      <p><strong>Charger ID:</strong> {{ stationDetails.chargerId }}</p>
+      <p><strong>Opening Hours:</strong> {{ stationDetails.openingHours }}</p>
+    </div>
+
+    <div class="content" *ngIf="activeTab === 'map'">
+      <!-- <img src="assets/map.jpg" alt="Map View" class="map-image" /> -->
+      <google-map [center]="mapCenter" [zoom]="zoom" height="400px" width="100%">
+        <map-marker [position]="mapCenter" title="Charging Station"></map-marker>
+      </google-map>
+
+    </div>
+
+    <div class="buttonDiv">
+      <button [routerLink]="['/slotbooking', stationDetails.id]" class="book-btn">
+        Book
+      </button>
+      <!-- <button (click)="getDirections()" class="book-btn">
+        Get Directions
+      </button> -->
+    </div>
+  </div>
+
+  <div *ngIf="!stationDetails">
+    <p>Loading station details...</p>
+  </div>
+</div>

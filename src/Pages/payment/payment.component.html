@@ -1,0 +1,19 @@
+<div class="payment-container">
+    <h2>Payment Details</h2>
+    <div class="payment-box">
+        <div class="details">
+
+            <p><strong>Username:</strong> {{ username }}</p>
+            <p><strong>Date:</strong> {{ date }}</p>
+            <p><strong>Location:</strong> Chennai</p>
+            <p><strong>Slot:</strong> {{ slot }}</p>
+            <p><strong>Booked Date:</strong> {{ date }}</p>
+            <p><strong>Booked Time:</strong> {{ time }}</p>
+            <p><strong>Amount:</strong> 1200</p>
+        </div>
+        <div class="btn">
+
+            <button (click)="processPayment()">Pay</button>
+        </div>
+    </div>
+</div>

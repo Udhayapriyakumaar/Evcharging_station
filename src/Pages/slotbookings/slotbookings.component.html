@@ -1,0 +1,62 @@
+<div class="container">
+    <!-- EV Charger Image -->
+    <div class="charger-container">
+      <img src="../../assets/charger.png" alt="EV Charger" class="charger-image">
+    </div>
+  
+    <!-- Slot Availability -->
+    <div class="slots-container">
+      <div class="slot-group">
+          <div class="slots-Available">
+            <h2>A</h2>
+            <h4><span>2 Available slots</span></h4>
+          </div>
+        <div class="slots">
+          <div class="slot available" (click)="handleSlotClick(slots[0])"></div>
+          <div class="slot available" (click)="handleSlotClick(slots[1])"></div>
+        </div>
+      </div>
+  
+      <div class="slot-group">
+          <div class="slots-Available">
+            <h2>B</h2>
+            <h4><span>1 Available slot</span></h4>
+          </div>
+        <div class="slots">
+          <div class="slot available" (click)="handleSlotClick(slots[2])"></div>
+          <div class="slot booked" (click)="handleSlotClick(slots[3])">
+            <img src="assets/car.jpg" alt="Booked Car">
+          </div>
+        </div>
+      </div>
+  
+      <div class="slot-group">
+          <div class="slots-Available">
+            <h2>C</h2>
+            <h4> <span class="text-red">0 Available slots</span></h4>
+          </div>
+        <div class="slots">
+          <div class="slot booked" (click)="handleSlotClick(slots[4])">
+            <img src="assets/car.jpg" alt="Booked Car">
+          </div>
+          <div class="slot booked" (click)="handleSlotClick(slots[5])">
+            <img src="assets/car.jpg" alt="Booked Car">
+          </div>
+        </div>
+      </div>
+  
+      <div class="slot-group">
+          <div class="slots-Available">
+            <h2>D</h2>
+            <h4><span>1 Available slot</span></h4>
+          </div>
+        <div class="slots">
+          <div class="slot available" (click)="handleSlotClick(slots[6])"></div>
+          <div class="slot booked" (click)="handleSlotClick(slots[7])">
+            <img src="assets/car.jpg" alt="Booked Car">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
